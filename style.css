@@ -1,0 +1,28 @@
+h1{
+    color: blue;
+  }
+  
+  .green{
+    background-color: green;
+  }
+  .orange{
+    background-color: aqua;
+  }
+  input{
+    text-align: center;
+    max-width: 40px;
+    justify-content: center;
+    color: black;
+    box-shadow: 2px 2px 5px #888888;
+    padding: 2px;
+    margin: 2px;
+    min-height: 25px;
+    border-radius: 5px;
+  }
+  div{
+
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+  }
