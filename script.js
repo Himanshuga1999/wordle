@@ -12,6 +12,7 @@ function moveToNextField(currentField, nextFieldId) {
   const maxLength = parseInt(currentField.getAttribute('maxlength'), 10);
   const currentLength = currentField.value.length;
   word=word+currentField.value
+
   console.log(word);
   if (currentLength >= maxLength) {
     const nextField = document.getElementById(nextFieldId);
@@ -31,8 +32,8 @@ function moveToNextField(currentField, nextFieldId) {
             console.log(key[i]);
             result++;
             let goal=document.getElementById(chance+'firstAlp')
-
             goal.classList.add("green")
+            addColourToAlp(key[i],'green')
           }
           if(i==1){
             console.log(key[i]);
@@ -41,25 +42,28 @@ function moveToNextField(currentField, nextFieldId) {
             let goal=document.getElementById(chance+'secondAlp')
            
             goal.classList.add("green")
-         
+            addColourToAlp(key[i],'green')
           }
           if(i==2){
             console.log(key[i]);
             result++;
             let goal=document.getElementById(chance+'thirdAlp')
             goal.classList.add("green")
+            addColourToAlp(key[i],'green')
           }
           if(i==3){
             console.log(key[i]);
             result++;
             let goal=document.getElementById(chance+'fourthAlp')
             goal.classList.add("green")
+            addColourToAlp(key[i],'green')
           }
           if(i==4){
             console.log(key[i]);
             result++;
             let goal=document.getElementById(chance+'fifthAlp')
             goal.classList.add("green")
+            addColourToAlp(key[i],'green')
           }
         }
         else if(key[i]===word[j]&& i!=j){
@@ -67,26 +71,31 @@ function moveToNextField(currentField, nextFieldId) {
             console.log(word[j]);
             let goal=document.getElementById(chance+'firstAlp')
             goal.classList.add("orange")
+            addColourToAlp(word[j],'orange')
           }
           if(j==1){
             console.log(word[j]);
             let goal=document.getElementById(chance+'secondAlp')
             goal.classList.add("orange")
+            addColourToAlp(word[j],'orange')
           }
           if(j==2){
             console.log(word[j]);
             let goal=document.getElementById(chance+'thirdAlp')
             goal.classList.add("orange")
+            addColourToAlp(word[j],'orange')
           }
           if(j==3){
             console.log(word[j]);
             let goal=document.getElementById(chance+'fourthAlp')
             goal.classList.add("orange")
+            addColourToAlp(word[j],'orange')
           }
           if(j==4){
             console.log(word[j]);
             let goal=document.getElementById(chance+'fifthAlp')
             goal.classList.add("orange")
+            addColourToAlp(word[j],orange)
           }
         }
       
@@ -199,4 +208,9 @@ function checkResult(word,key,flag){
   if(counter===5){flag=0;}
     
   return flag;
+}
+
+function addColourToAlp(alp,colour){
+  let letter=document.getElementById('alp'+alp)
+  letter.classList.add(colour)
 }
